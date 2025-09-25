@@ -2,6 +2,7 @@
 import { Flower, Menu } from "lucide-react";
 import Image from "next/image"
 import Link from "next/link"
+import ProtectedImage from "./ProtectedImage";
 
 export default function NavigationBar() {
     const navlinks = [
@@ -33,12 +34,20 @@ export default function NavigationBar() {
                 <div className="flex justify-start items-center gap-2">
                     {/* <Flower size={20} className="text-gray-100" /> */}
                     <i class="fas fa-dove text-lg text-gray-200"></i>
-                    <Image
+                    {/* <Image
                         src="/jv-transparent.png"
                         width={50}
                         height={50}
                         alt="Image of Juliana"
                         className="rounded-full shadow-sm"
+                    /> */}
+
+                    <ProtectedImage
+                        src="/jv-transparent.png"
+                        alt="Protected"
+                        width={50}
+                        height={50}
+                        className="shadow-sm rounded"
                     />
 
                     <div className="">

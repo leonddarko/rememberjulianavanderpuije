@@ -1,6 +1,6 @@
 "use client"
 
-import { Flower } from "lucide-react";
+import { ChevronDown, Flower } from "lucide-react";
 import NavigationBar from "./ui/navbar";
 import Image from "next/image";
 
@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <>
       <NavigationBar />
-      <div className="mt-24 flex flex-col md:flex-row justify-end md:justify-center items-center gap-4 h-screen md:h-auto bg-[url(/backgroundimages/clouds-closeup.png)] bg-cover bg-center bg-no-repeat rounded-3xl shadow-sm">
+      <div className="mt-24 flex flex-col md:flex-row justify-end md:justify-center items-center gap-4 h-screen md:h-auto bg-[url(/backgroundimages/clouds-closeup.png)] bg-cover bg-center bg-no-repeat rounded-3xl shadow-sm pt-20">
 
-        <div className="text-center md:text-left mt-10 md:mt-0">
+        <div className="text-center md:text-left md:mt-0">
           <div className="flex justify-center md:justify-start gap-2 mb-2">
             <i className="fas fa-dove text-lg text-white md:text-gray-200"></i>
             <i className="fas fa-dove text-lg text-white md:text-gray-200"></i>
@@ -35,6 +35,9 @@ export default function Home() {
           draggable={false}
           onContextMenu={(e) => e.preventDefault()}
         />
+      </div>
+      <div className="rounded-full p-3 w-fit bg-zinc-50 text-yellow-800 relative -top-5 m-auto">
+        <ChevronDown size={20} />
       </div>
     </>
   );

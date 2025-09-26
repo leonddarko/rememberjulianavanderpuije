@@ -3,9 +3,11 @@
 import { Flower, Menu } from "lucide-react";
 import Image from "next/image"
 import Link from "next/link"
-import ProtectedImage from "./ProtectedImage";
+import { usePathname } from "next/navigation";
 
 export default function NavigationBar() {
+    const pathname = usePathname();
+
     const navlinks = [
         {
             id: 0,
@@ -60,12 +62,20 @@ export default function NavigationBar() {
 
                 <div className="hidden md:flex justify-start items-center gap-5 text-black">
                     {navlinks.map((item) => (
-                        <div key={item.id}>
-                            <Link href={item.link} className="text-zinc-400">
-                                <span className={`font-normal text-sm text-yellow-950 hover:text-yellow-800 transition-all`}>
-                                    {item.link}
-                                </span>
-                            </Link>
+                        <div
+                            key={item.id}
+                            className="flex justify-center items-center gap-2 p-1 rounded-4xl"
+                        >
+                            {pathname === item.path && (
+                                <i className={`fas fa-dove text-sm text-yellow-800/20 transition ease-in`}></i>
+                            )}
+                            <div key={item.id}>
+                                <Link href={item.link} className="text-zinc-400">
+                                    <span className={`font-normal text-sm text-yellow-950 hover:text-yellow-800 transition-all`}>
+                                        {item.link}
+                                    </span>
+                                </Link>
+                            </div>
                         </div>
                     ))}
                 </div>

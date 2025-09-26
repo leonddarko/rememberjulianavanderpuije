@@ -1,4 +1,5 @@
 "use client"
+
 import { Flower, Menu } from "lucide-react";
 import Image from "next/image"
 import Link from "next/link"
@@ -33,21 +34,15 @@ export default function NavigationBar() {
             <div className="fixed w-full flex justify-between items-center bg-white px-4 py-4 md:px-10 top-0 opacity-90 rounded-md">
                 <div className="flex justify-start items-center gap-2">
                     {/* <Flower size={20} className="text-gray-100" /> */}
-                    <i class="fas fa-dove text-lg text-gray-200"></i>
-                    {/* <Image
+                    <i className="fas fa-dove text-lg text-gray-200"></i>
+                    <Image
                         src="/jv-transparent.png"
                         width={50}
                         height={50}
                         alt="Image of Juliana"
                         className="rounded-full shadow-sm"
-                    /> */}
-
-                    <ProtectedImage
-                        src="/jv-transparent.png"
-                        alt="Protected"
-                        width={50}
-                        height={50}
-                        className="shadow-sm rounded"
+                        draggable={false}
+                        onContextMenu={(e) => e.preventDefault()}
                     />
 
                     <div className="">
@@ -64,13 +59,15 @@ export default function NavigationBar() {
                 </div>
 
                 <div className="hidden md:flex justify-start items-center gap-5 text-black">
-                    {navlinks.map((item) => (<>
-                        <Link key={item.id} href={item.link} className="text-zinc-400">
-                            <span className={`font-normal text-sm text-yellow-950 hover:text-yellow-800 transition-all`}>
-                                {item.link}
-                            </span>
-                        </Link>
-                    </>))}
+                    {navlinks.map((item) => (
+                        <div key={item.id}>
+                            <Link href={item.link} className="text-zinc-400">
+                                <span className={`font-normal text-sm text-yellow-950 hover:text-yellow-800 transition-all`}>
+                                    {item.link}
+                                </span>
+                            </Link>
+                        </div>
+                    ))}
                 </div>
             </div>
         </>

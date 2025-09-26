@@ -24,7 +24,7 @@ export default function ProtectedImage({
                 height={height}
                 draggable={false}
                 onContextMenu={(e) => e.preventDefault()}
-                className="object-cover"
+                // className="object-cover"
             />
 
             {/* Transparent overlay to block right-click / drag */}

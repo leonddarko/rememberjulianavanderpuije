@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <>
       <NavigationBar />
-      <div className="mt-24 flex flex-col md:flex-row justify-end md:justify-center items-center gap-4 h-screen md:h-auto bg-[url(/backgroundimages/clouds-closeup.png)] bg-cover bg-center bg-no-repeat rounded-3xl shadow-sm ">
+      <div className="mt-24 flex flex-col md:flex-row justify-end md:justify-center items-center gap-4 md:h-auto bg-[url(/backgroundimages/clouds-closeup.png)] bg-cover bg-center bg-no-repeat rounded-3xl shadow-sm ">
 
-        <div className="text-center md:text-left pt-20 md:pt-0">
+        <div className="text-center md:text-left mt-20 md:mt-0">
           <div className="flex justify-center md:justify-start gap-2 mb-2">
             <i className="fas fa-dove text-lg text-white md:text-gray-200"></i>
             <i className="fas fa-dove text-lg text-white md:text-gray-200"></i>

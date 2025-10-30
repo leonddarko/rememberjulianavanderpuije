@@ -65,14 +65,13 @@ export default function Biography() {
                         onContextMenu={(e) => e.preventDefault()}
                     />
                     <div className="px-4 text-4xl md:text-5xl text-center text-yellow-800 font-bold my-4">
-                        JULIANA'S BIOGRAPHY
+                        JULIANA&lsquo;S BIOGRAPHY
                     </div>
                     <div className="flex justify-center gap-1">
                         <Flower size={40} className="text-gray-200" />
                     </div>
                 </div>
             </div>
-
             <div className=" flex flex-wrap justify-center items-center md:items-start gap-4 px-4 py-8 md:px-30 md:py-20">
 
                 {/* Main Sheet */}
@@ -102,7 +101,7 @@ export default function Biography() {
                             </p>
 
                             <p>
-                                A devout Anglican, Juliana didn’t just practice her faith—she lived it. Her life was
+                                A devout Anglican, Juliana didn&lsquo;t just practice her faith—she lived it. Her life was
                                 rooted in Christ, and she served her church with joy and humility. At Holy Trinity
                                 Cathedral, Accra, she held several leadership roles, including:
                             </p>

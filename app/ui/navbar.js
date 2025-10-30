@@ -1,6 +1,6 @@
 "use client"
 
-import { Flower, Menu } from "lucide-react";
+import { ChevronDown, Dot, Flower, Menu } from "lucide-react";
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation";
@@ -33,7 +33,7 @@ export default function NavigationBar() {
 
     return (
         <>
-            <div className="fixed w-full flex justify-between items-center bg-white px-4 py-4 md:px-10 top-0 opacity-90 rounded-md">
+            <div className="fixed w-full flex justify-between items-center bg-white px-4 py-4 md:px-10 top-0 rounded-md z-50">
                 <div className="flex justify-start items-center gap-2">
                     {/* <Flower size={20} className="text-gray-100" /> */}
                     <i className="fas fa-dove text-lg text-gray-200"></i>
@@ -56,9 +56,31 @@ export default function NavigationBar() {
                     </div>
                 </div>
 
-                <div className="text-gray-300 md:hidden hover:text-yellow-800 transition-all">
-                    <Menu size={25} />
+                {/* Small Screen Navigation */}
+                <div className="dropdown dropdown-end md:hidden">
+                    {/* <div className="text-gray-300 md:hidden hover:text-yellow-800 transition-all">
+                    </div> */}
+                    <button tabIndex={0} role="button"
+                        className="btn-neutral p-3 border-0 text-black bg-zinc-100 md:hidden rounded-full">
+                        <ChevronDown size={20} />
+                    </button>
+
+                    <ul tabIndex={0} className="dropdown-content menu rounded-2xl z-[100] w-80 p-2 shadow-md mt-2 bg-white border border-zinc-200">
+                        <li>
+                            {navlinks.map((item) => (
+                                <a key={item.id} href={item.path} className="flex justify-between items-center gap-2 text-black/40 transition-all">
+                                    <div className="flex items-center gap-2 text-zinc-400">
+                                        <span className={` ${item.path === pathname && "text-yellow-950"} font-semibold font-notosans text-sm transition-all`}>
+                                            {item.link}
+                                        </span>
+                                    </div>
+                                    <Dot size={20} className={`${item.path === pathname ? "text-black" : "text-zinc-300"}`} />
+                                </a>
+                            ))}
+                        </li>
+                    </ul>
                 </div>
+                {/* Small Screen Navigation */}
 
                 <div className="hidden md:flex justify-start items-center gap-5 text-black">
                     {navlinks.map((item) => (
@@ -70,7 +92,7 @@ export default function NavigationBar() {
                                 <i className={`fas fa-dove text-sm text-yellow-800/20 transition ease-in`}></i>
                             )}
                             <div key={item.id}>
-                                <Link href={item.link} className="text-zinc-400">
+                                <Link href={item.path} className="text-zinc-400">
                                     <span className={`font-normal text-sm text-yellow-950 hover:text-yellow-800 transition-all`}>
                                         {item.link}
                                     </span>

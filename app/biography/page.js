@@ -53,25 +53,30 @@ export default function Biography() {
 
     return (
         <>
-            <div className=" flex justify-center items-center mt-40">
-                <div className="">
+            <div className="flex justify-center items-center min-h-[70vh] pt-32 pb-20 bg-[url('/backgroundimages/clouds-closeup.png')] bg-cover bg-center bg-no-repeat">
+                <motion.div
+                    className="text-center space-y-6"
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1.2, ease: "easeOut" }}
+                >
                     <Image
-                        src="/jv-transparent.png"
+                        src="/awura.png"
                         width={200}
                         height={200}
-                        alt="Image of Juliana"
-                        className="rounded-full shadow-sm m-auto"
+                        alt="Portrait of Juliana Awura Adjoa Vanderpuije"
+                        className="rounded-full shadow-lg m-auto select-none"
                         draggable={false}
                         onContextMenu={(e) => e.preventDefault()}
+                        priority
                     />
-                    <div className="px-4 text-4xl md:text-5xl text-center text-yellow-800 font-bold my-4">
-                        JULIANA&lsquo;S BIOGRAPHY
-                    </div>
-                    <div className="flex justify-center gap-1">
-                        <Flower size={40} className="text-gray-200" />
-                    </div>
-                </div>
+
+                    <h1 className="text-4xl md:text-6xl font-extrabold text-yellow-900 drop-shadow-md tracking-tight max-w-sm md:max-w-md mx-auto">
+                        JULIANA&apos;S BIOGRAPHY
+                    </h1>
+                </motion.div>
             </div>
+
             <div className=" flex flex-wrap justify-center items-center md:items-start gap-4 px-4 py-8 md:px-30 md:py-20">
 
                 {/* Main Sheet */}

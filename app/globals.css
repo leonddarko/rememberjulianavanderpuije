@@ -1,2 +1,35 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+/* .embla {
+    overflow: hidden;
+    max-width: 80%;
+}
+
+.embla__container {
+    display: flex;
+    gap: 5;
+}
+
+.embla__slide {
+    flex: 0 0 10%;
+} */
+
+
+
+.embla2 {
+    overflow: hidden;
+}
+
+.embla__container2 {
+    display: flex;
+}
+
+.embla__slide2 {
+    flex: 0 0 100%;
+    min-width: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}

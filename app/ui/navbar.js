@@ -14,7 +14,7 @@ export default function NavigationBar() {
         { id: 0, path: "/", link: "Home" },
         { id: 1, path: "/biography", link: "Biography" },
         { id: 2, path: "/tribute", link: "Tribute" },
-        { id: 3, path: "/gallery", link: "Photo Gallery" },
+        { id: 3, path: "/photo-gallery", link: "Photo Gallery" },
     ]
 
     return (

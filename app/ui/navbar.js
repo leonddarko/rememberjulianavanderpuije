@@ -13,7 +13,7 @@ export default function NavigationBar() {
     const navlinks = [
         { id: 0, path: "/", link: "Home" },
         { id: 1, path: "/biography", link: "Biography" },
-        { id: 2, path: "/tribute", link: "Tribute" },
+        { id: 2, path: "/tributes", link: "Tribute" },
         { id: 3, path: "/photo-gallery", link: "Photo Gallery" },
     ]
 
